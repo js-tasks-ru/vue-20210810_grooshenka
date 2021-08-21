@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -31,23 +30,23 @@
     <div id="app" class="container">
       <div class="row">
         <div class="col">
-          <input type="number" />
+          <input type="number" v-model.number="oprnd1" />
         </div>
 
         <div class="col" style="display: flex; flex-direction: column; font-family: emoji">
-          <label><input type="radio" value="sum" /> ➕</label>
-          <label><input type="radio" value="subtract" /> ➖</label>
-          <label><input type="radio" value="multiply" /> ✖</label>
-          <label><input type="radio" value="divide" /> ➗</label>
+          <label><input type="radio" v-model="operator" value="sum" /> ➕</label>
+          <label><input type="radio" v-model="operator" value="subtract" /> ➖</label>
+          <label><input type="radio" v-model="operator" value="multiply" /> ✖</label>
+          <label><input type="radio" v-model="operator" value="divide" /> ➗</label>
         </div>
 
         <div class="col">
-          <input type="number" />
+          <input type="number" v-model.number="oprnd2" />
         </div>
 
         <div class="col">=</div>
 
-        <output class="col">0</output>
+        <output class="col">{{ calcResult }}</output>
       </div>
     </div>
 
