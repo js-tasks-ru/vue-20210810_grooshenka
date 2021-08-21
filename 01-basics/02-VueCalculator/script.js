@@ -38,3 +38,4 @@ const app = createApp(Root);
 const vm = app.mount('#app');
 
 window.vm = vm;
+
