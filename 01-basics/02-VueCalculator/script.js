@@ -15,8 +15,8 @@ const Root = {
 
   computed: {
     calcResult: function (e) {
-      const op1 = this.oprnd1;
-      const op2 = this.oprnd2;
+      var op1 = this.oprnd1;
+      var op2 = this.oprnd2;
 
       switch (this.operator) {
         case 'sum':
